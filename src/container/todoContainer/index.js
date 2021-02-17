@@ -16,11 +16,25 @@ const TodoContainer=()=> {
         const newTodoList=[...todos,newTodo]
        setTodos(newTodoList)
     }
+    const handleRemoveTodo =(id)=>{
+      const newTodoList=todos.filter(todo=>todo.id!==id)
+        setTodos(newTodoList)
+    }
+    const handleCheckboxChange =(id)=>{
+        const newTodoList=todos.map(todo=>{
+            if(todo.id ===id)
+                return {...todo,done:!todo.done}
+            return todo;
+
+        })
+        setTodos(newTodoList)
+    }
     return(
         <div>
-            <h4 style={{alignItems:"center"}}> Todo Application</h4>
+            <h4 style={{align:"center"}}> Todo Application</h4>
             <AddTodo addtodo={handelAddTodo}/>
-            {todos.map((todo)=><Todo todo={todo}/>)}
+            {todos.length>0?todos.map((todo)=><Todo todo={todo} removeTodo={handleRemoveTodo}
+                                                    handleChange ={handleCheckboxChange}/>):"no todo left"}
 
         </div>
 
