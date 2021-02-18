@@ -16,10 +16,10 @@ const Todo=({todo,removeTodo,handleChange})=>{
          <span style={todo.done?{textDecoration:"line-through"}:null}>{todo.title}</span>
          <span style=
                    {{position:"fixed",
-                       right:300 ,
+                       right:600 ,
                        padding:"10px",
                        cursor:"pointer",
-                       fontWeight:600}}
+                       fontWeight:900}}
          onClick={()=>{removeTodo(todo.id)}}
 
          >
