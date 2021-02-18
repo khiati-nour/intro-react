@@ -3,7 +3,7 @@
 
 
 
-body{
+.container{
   background-image: url(./background.png);
   background-attachment: fixed;
   background-position: center;
@@ -12,6 +12,8 @@ body{
   align-content: center;
   text-align: center;
   align-items: center;
+  height: 100vh;
+
 
 }
 

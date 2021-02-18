@@ -8,9 +8,9 @@ const todo1 = "Learn React"
 function App(){
  return(
     <div className="App">
-
+<div class="container">
       <TodoContainer/>
-
+</div>
     </div>)
 
 

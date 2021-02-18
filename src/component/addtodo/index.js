@@ -21,9 +21,9 @@ addtodo(newTodo)
     }
     return(<div style={addTodoStyle}>
 
-        <form style={{paddingTop:"300px", marginBottom:"50px"}} onSubmit={HandleSubmit}>
-            <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title} placeholder="Enter a To Do" required/>
-            <input type="submit"/>
+        <form style={{paddingTop:"50px", marginBottom:"50px",display:"block", alignContent:"center", textAlign:"center", alignItems:"centre"}} onSubmit={HandleSubmit}>
+            <input style={{borderRadius:"10px", borderColor:"hotpink", width:"300px"}} type="text" onChange={(e)=>setTitle(e.target.value)} value={title} placeholder="Enter a To Do" required/>
+            <input style={{marginLeft:"500px",display:"block", alignContent:"center", textAlign:"center", alignItems:"centre",marginTop:"20px", borderRadius:"10px", padding:"5px",fontWeight:600,backgroundColor:'hotpink'}} type="submit"/>
 
 
 

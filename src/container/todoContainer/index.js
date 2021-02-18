@@ -45,7 +45,7 @@ const TodoContainer=()=> {
     }
     return(
         <div>
-            <h4 style={{align:"center"}}> Todo Application</h4>
+            <h4 style={{align:"center", paddingTop:"200px", fontWeight:900, color:"Hotpink"}}> Todo Application</h4>
             <AddTodo addtodo={HandelAddTodo}/>
             {todos.length>0?todos.map((todo)=><Todo todo={todo} removeTodo={handleRemoveTodo}
                                                     handleChange ={handleCheckboxChange}/>):"no todo left"}
