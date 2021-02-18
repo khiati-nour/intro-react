@@ -10,13 +10,13 @@ const Todo=({todo,removeTodo,handleChange})=>{
         handleChange(todo.id)
     }
     return(
-     <div>
-
-         <input  type="checkbox" checked={todo.done} onChange={()=>handleCheckboxChange()}/>
+     <div style={{alignItems:"left", textAlign:"left", alignContent:"left", marginLeft:"225px"}}>
+<form style={{}}>
+    <input style={{margin: "0",padding:"0",  height:"13px"}} type="checkbox" checked={todo.done} onChange={()=>handleCheckboxChange()}/>
          <span style={todo.done?{textDecoration:"line-through"}:null}>{todo.title}</span>
          <span style=
                    {{position:"fixed",
-                       right:20 ,
+                       right:300 ,
                        padding:"10px",
                        cursor:"pointer",
                        fontWeight:600}}
@@ -26,7 +26,7 @@ const Todo=({todo,removeTodo,handleChange})=>{
 
              X</span>
          <hr/>
-
+</form>
      </div>
     )
 
