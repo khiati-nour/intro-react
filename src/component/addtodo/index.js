@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useRef, useEffect} from "react";
 
 
 
@@ -9,7 +9,7 @@ const addTodoStyle={
 alignItems:"center"
 }
 const[title,setTitle]=useState("")
-const handleSubmit=(e)=>{
+const HandleSubmit=(e)=>{
     e.preventDefault()
 const newTodo= {id:Math.random(),title:title,done:false}
 addtodo(newTodo)
@@ -19,7 +19,7 @@ addtodo(newTodo)
     }
     return(<div style={addTodoStyle}>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={HandleSubmit}>
             <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title} placeholder="Enter a To Do" required/>
             <input type="submit"/>
 
